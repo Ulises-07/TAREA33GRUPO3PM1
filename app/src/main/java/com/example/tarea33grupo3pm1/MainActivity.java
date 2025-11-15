@@ -222,7 +222,6 @@ public class MainActivity extends AppCompatActivity implements AdaptadorGrabacio
 
     private void cancelarGrabacion() {
         if (rutaArchivoActual != null) {
-            // Eliminar el archivo temporal
             File archivo = new File(rutaArchivoActual);
             if (archivo.exists()) {
                 archivo.delete();
@@ -309,7 +308,6 @@ public class MainActivity extends AppCompatActivity implements AdaptadorGrabacio
                 layoutControles.setVisibility(View.VISIBLE);
                 entradaNombreGrabacion.setEnabled(true);
             } else {
-                // Estado inicial/reset
                 btnAlternarGrabacion.setText("GRABAR");
                 btnAlternarGrabacion.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_green_dark));
                 btnAlternarGrabacion.setVisibility(View.VISIBLE);
